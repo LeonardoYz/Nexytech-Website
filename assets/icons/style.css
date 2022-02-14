@@ -1,0 +1,120 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?x05nqu');
+  src:  url('fonts/icomoon.eot?x05nqu#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?x05nqu') format('truetype'),
+    url('fonts/icomoon.woff?x05nqu') format('woff'),
+    url('fonts/icomoon.svg?x05nqu#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.failed-icon:before {
+  content: "\e900";
+}
+.about-icon:before {
+  content: "\e901";
+}
+.arrow-up-icon:before {
+  content: "\e902";
+}
+.back-end-icon:before {
+  content: "\e903";
+}
+.checkmark-icon:before {
+  content: "\e904";
+}
+.close-icon:before {
+  content: "\e905";
+}
+.company-icon:before {
+  content: "\e906";
+}
+.email-icon:before {
+  content: "\e907";
+}
+.email-icon_outline:before {
+  content: "\e908";
+}
+.facebook-icon:before {
+  content: "\e909";
+}
+.five-stars-icon:before {
+  content: "\e90a";
+}
+.front-end-icon:before {
+  content: "\e90b";
+}
+.gear-icon:before {
+  content: "\e90c";
+}
+.home-icon:before {
+  content: "\e90d";
+}
+.instagram-icon:before {
+  content: "\e90e";
+}
+.left-curved-arrow:before {
+  content: "\e90f";
+}
+.linkedin-icon:before {
+  content: "\e910";
+}
+.mobile-menu-icon:before {
+  content: "\e911";
+}
+.moon-icon:before {
+  content: "\e912";
+}
+.phone-icon:before {
+  content: "\e913";
+}
+.quote-icon:before {
+  content: "\e914";
+}
+.right-curved-arrow:before {
+  content: "\e915";
+}
+.rocket-icon:before {
+  content: "\e916";
+}
+.services-icon:before {
+  content: "\e917";
+}
+.straight-arrow-icon:before {
+  content: "\e918";
+}
+.sun-icon:before {
+  content: "\e919";
+}
+.team-icon:before {
+  content: "\e91a";
+}
+.tech-icon:before {
+  content: "\e91b";
+}
+.testimonial-icon:before {
+  content: "\e91c";
+}
+.user-icon:before {
+  content: "\e91d";
+}
+.ux-ui-design-icon:before {
+  content: "\e91e";
+}
