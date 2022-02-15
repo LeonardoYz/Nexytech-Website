@@ -1,0 +1,13 @@
+@use '../abstracts' as *;
+
+/*==== SCROLL BAR ========================*/
+::-webkit-scrollbar {
+  width: 0.7rem;
+  background: var(--primary-color);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--light-gray);
+  border-radius: 0.5rem;
+}

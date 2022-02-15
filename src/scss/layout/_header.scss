@@ -1,0 +1,216 @@
+@use '../abstracts' as *;
+
+.header {
+  position: fixed;
+  bottom: 0;
+  z-index: map-get($z-index, 'header');
+  width: 100%;
+  background-color: var(--white-color);
+
+  @include breakpoint('x-large') {
+    top: 0;
+    bottom: unset;
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-height);
+  }
+
+  &__logo {
+    a {
+      position: relative;
+
+      img:first-child {
+        width: 2.1875rem;
+      }
+
+      img:last-child {
+        opacity: 0;
+        display: none;
+      }
+
+      @include breakpoint('x-large') {
+        display: flex;
+        align-items: center;
+
+        img:first-child {
+          width: 3.25rem;
+        }
+
+        img:last-child {
+          display: block;
+          position: absolute;
+          left: -0.125rem;
+          z-index: map-get($z-index, 'default');
+          width: 11.6438rem;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: left 300ms ease-in-out, opacity 300ms ease-in,
+            transform 300ms linear;
+        }
+
+        &:hover {
+          img:last-child {
+            left: 2.5rem;
+            opacity: 1;
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }
+
+  &__menu {
+    position: relative;
+    display: none;
+
+    &--mobile {
+      cursor: pointer;
+
+      .mobile-menu-icon {
+        font-size: 1.1875rem;
+      }
+
+      .close-icon {
+        position: absolute;
+        right: 0.625rem;
+        z-index: map-get($z-index, 'mobile-menu');
+        font-size: 1.0625rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 300ms ease-in, right 300ms ease-in-out;
+      }
+    }
+
+    @include breakpoint('x-large') {
+      display: flex;
+      align-items: center;
+      gap: 3.125rem;
+
+      ul {
+        display: flex;
+        gap: 2.1875rem;
+      }
+
+      li {
+        &:last-child {
+          display: none;
+        }
+
+        i {
+          display: none;
+        }
+
+        span {
+          position: relative;
+          color: var(--dark);
+          font-size: 0.9375rem;
+          transition: color 280ms ease-in;
+
+          &::after {
+            content: '';
+            position: absolute;
+            left: -1.25rem;
+            bottom: -0.625rem;
+            width: 100%;
+            height: 0.125rem;
+            opacity: 0;
+            background-color: var(--primary-color);
+            transition: opacity 280ms ease-in-out, left 280ms ease-out;
+          }
+
+          &:hover {
+            color: var(--primary-color);
+
+            &::after {
+              opacity: 1;
+              left: 0;
+            }
+          }
+        }
+      }
+
+      &--mobile {
+        display: none;
+      }
+    }
+  }
+
+  /*========== Mobile Menu ==========*/
+  &__navigation.show {
+    .header__menu {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: -1.875rem;
+      left: 0;
+      z-index: map-get($z-index, 'mobile-menu');
+      width: 100%;
+      border-radius: 1.5625rem 1.5625rem 0 0;
+      box-shadow: 0px -4px 10px -5px rgba(0, 0, 0, 0.25);
+      padding: 2.75rem 2.4375rem 4.75rem 2.375rem;
+      background-color: var(--white-color);
+      opacity: 0;
+      visibility: hidden;
+      animation: mobileMenuFadeIn 300ms forwards ease-in-out;
+
+      ul {
+        display: grid;
+        align-items: flex-end;
+        row-gap: 3rem;
+        column-gap: 3.25rem;
+        grid-template-columns: repeat(3, 1fr);
+
+        a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.375rem;
+          color: var(--dark);
+
+          i {
+            font-size: 1.125rem;
+          }
+
+          .team-icon {
+            font-size: 1.6875rem;
+          }
+
+          .testimonial-icon {
+            font-size: 1.4375rem;
+          }
+
+          .right-curved-arrow {
+            font-size: 1.3125rem;
+          }
+
+          span {
+            font-weight: var(--semibold-font);
+            font-size: 0.9375rem;
+          }
+        }
+      }
+    }
+
+    .header__menu--mobile {
+      .close-icon {
+        right: 1.5rem;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__button {
+    .contact-button {
+      display: none;
+
+      @include breakpoint('x-large') {
+        display: block;
+      }
+    }
+  }
+}

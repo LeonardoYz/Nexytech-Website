@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+%contact-button {
+  padding: 0.75rem 1.5625rem;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-family: var(--lexend-font-family);
+  font-weight: var(--medium-font);
+  @include button-shadow;
+  @include border-radius('5');
+  transition: background-color 280ms ease-in-out, box-shadow 280ms ease-in;
+
+  &:hover {
+    background-color: var(--primary-color-hover);
+    box-shadow: 0 0 0 0;
+  }
+}
+
+.contact-button {
+  @extend %contact-button;
+}
