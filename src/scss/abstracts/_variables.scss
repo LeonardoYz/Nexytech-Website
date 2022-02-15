@@ -1,0 +1,66 @@
+@use 'mixins' as *;
+
+:root {
+  --header-height: 4.0625rem;
+
+  @include breakpoint('x-large') {
+    --header-height: 6.4375rem;
+  }
+
+  /*========== Colors ==========*/
+  --hue: 205;
+
+  --dark: hsl(0, 0%, 10%);
+  --dark-alt: hsl(0, 0%, 15%);
+  --grayish-blue: hsl(215, 19%, 40%);
+  --primary-color: hsl(var(--hue), 84%, 55%);
+  --primary-color-hover: hsl(var(--hue), 84%, 45%);
+  --green-color: hsl(151, 100%, 43%);
+  --yellow-color: hsl(46, 97%, 63%);
+  --red-color: hsl(0, 61%, 55%);
+  --light-gray: hsl(0, 0%, 85%);
+  --primary-color-low-opacity: hsl(var(--hue), 84%, 93%);
+  --green-color-low-opacity: hsl(156, 84%, 93%);
+  --yellow-color-low-opacity: hsl(55, 71%, 93%);
+  --red-color-low-opacity: hsl(0, 84%, 93%);
+  --white-color: hsl(0, 0%, 100%);
+  --dark-grey: hsl(0, 0%, 65%);
+  --input-color: hsl(0, 0%, 80%);
+  --loading-bar-bg-color: hsl(0, 0%, 90%);
+
+  /*========== Font and Typography ==========*/
+  --lexend-font-family: 'Lexend', sans-serif;
+  --open-sans-font-family: 'Open Sans', sans-serif;
+
+  /*========== Font Size ==========*/
+  --h1-font-size: 1.875rem;
+  --h2-font-size: 1.6875rem;
+  --h3-font-size: 1.5rem;
+  --big-font-size: 1.1875rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --small-font-size-alt: 0.8125rem;
+  --smaller-font-size: 0.75rem;
+
+  /*========== Font Weight ==========*/
+  --regular-font: 400;
+  --medium-font: 500;
+  --semibold-font: 600;
+  --bold-font: 700;
+}
+
+/*==== Z Index =========================*/
+$z-index: (
+  'negative': -1,
+  'default': 1,
+  'header': 10,
+  'mobile-menu': 50,
+  'preloading-screen': 100
+);
+
+/*==== Container Width and Margin =========================*/
+$container: (
+  'small': 0 1.5625rem,
+  'large': 992px,
+  'x-large': 1180px
+);

@@ -1,0 +1,10 @@
+@use '../abstracts' as *;
+
+.container {
+  margin: map-get($container, 'small');
+
+  @include breakpoint('x-large') {
+    margin: 0 auto;
+    max-width: map-get($container, 'x-large');
+  }
+}

@@ -1,0 +1,13 @@
+@use '../abstracts' as *;
+
+body {
+  color: var(--dark);
+  font: var(--regular-font) var(--normal-font-size) var(--open-sans-font-family);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: var(--bold-font);
+  font-family: var(--lexend-font-family);
+}
