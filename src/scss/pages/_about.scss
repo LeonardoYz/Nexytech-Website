@@ -1,0 +1,32 @@
+@use '../abstracts' as *;
+
+.about {
+  &__image {
+    position: relative;
+    margin-bottom: calc(2.7731rem + 1.6875rem);
+
+    &::before,
+    img {
+      @include border-radius('5');
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -1.5625rem;
+      height: 4.6rem;
+      width: 4.6rem;
+      background-color: var(--primary-color);
+    }
+
+    img {
+      position: relative;
+      top: 1.6875rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.375rem;
+  }
+}
