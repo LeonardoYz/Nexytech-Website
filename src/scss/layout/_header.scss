@@ -205,7 +205,7 @@
   }
 
   &__button {
-    .contact-button {
+    .button {
       display: none;
 
       @include breakpoint('x-large') {

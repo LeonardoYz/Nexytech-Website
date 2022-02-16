@@ -1,0 +1,95 @@
+@use '../abstracts' as *;
+
+.home {
+  &__cta {
+    margin-bottom: 3.0625rem;
+  }
+
+  &__image {
+    display: flex;
+    gap: 0.375rem;
+    margin-bottom: calc(3.2262rem + 3.195rem);
+
+    img:nth-child(2) {
+      position: relative;
+      top: 3.195rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2.0625rem;
+  }
+
+  &__button {
+    .button {
+      display: inline-flex;
+      align-items: center;
+      gap: 1.125rem;
+      padding: 0.625rem 1.875rem;
+
+      .straight-arrow-icon {
+        font-size: 1.9375rem;
+        transition: transform 280ms ease-in-out;
+      }
+
+      &:hover {
+        .straight-arrow-icon {
+          transform: translateX(0.4375rem);
+        }
+      }
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+
+    .card {
+      &__box {
+        padding: 3.25rem 0 2rem;
+
+        &.process {
+          .card__icon {
+            background-color: var(--green-color-low-opacity);
+          }
+        }
+
+        &.technologies {
+          .card__icon {
+            background-color: var(--yellow-color-low-opacity);
+          }
+        }
+
+        &.agile {
+          .card__icon {
+            background-color: var(--primary-color-low-opacity);
+          }
+        }
+      }
+
+      &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4.375rem;
+        height: 4.375rem;
+        margin-bottom: 2.4375rem;
+        @include border-radius('20');
+
+        .gear-icon {
+          font-size: 3.1725rem;
+        }
+
+        .tech-icon,
+        .rocket-icon {
+          font-size: 2.7644rem;
+        }
+      }
+
+      &__title {
+        margin-bottom: 1.25rem;
+      }
+    }
+  }
+}

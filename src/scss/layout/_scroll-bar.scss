@@ -2,12 +2,25 @@
 
 /*==== SCROLL BAR ========================*/
 ::-webkit-scrollbar {
-  width: 0.7rem;
-  background: var(--primary-color);
-  border-radius: 0.5rem;
+  width: 0.65rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--light-gray);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--light-gray);
+  background-color: var(--primary-color);
   border-radius: 0.5rem;
+
+  &:hover {
+    background-color: var(--primary-color-hover);
+  }
+}
+
+@supports (scrollbar-color: grey lightgrey) {
+  * {
+    scrollbar-color: var(--primary-color) var(--light-gray);
+    scrollbar-width: 0.65rem;
+  }
 }
