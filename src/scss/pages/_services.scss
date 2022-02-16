@@ -1,0 +1,59 @@
+@use '../abstracts' as *;
+
+.services {
+  &__text {
+    margin-bottom: 2.375rem;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__details {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 4.5rem;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    .checkmark-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.8125rem;
+      color: var(--white-color);
+      height: 25px;
+      width: 25px;
+      background-color: var(--primary-color);
+      @include border-radius('100');
+    }
+
+    span {
+      position: relative;
+      top: 0.0625rem;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    gap: 5.0625rem;
+
+    .card {
+      &__box {
+        i {
+          font-size: 3.4375rem;
+          display: block;
+          margin-bottom: 2.25rem;
+        }
+      }
+
+      &__title {
+        margin-bottom: 0.6875rem;
+      }
+    }
+  }
+}

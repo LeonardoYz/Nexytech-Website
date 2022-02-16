@@ -67,6 +67,12 @@
     position: relative;
     display: none;
 
+    span {
+      color: var(--dark);
+      font-size: 0.9375rem;
+      transition: color 280ms ease-in;
+    }
+
     &--mobile {
       cursor: pointer;
 
@@ -106,9 +112,6 @@
 
         span {
           position: relative;
-          color: var(--dark);
-          font-size: 0.9375rem;
-          transition: color 280ms ease-in;
 
           &::after {
             content: '';
@@ -189,7 +192,6 @@
 
           span {
             font-weight: var(--semibold-font);
-            font-size: 0.9375rem;
           }
         }
       }
