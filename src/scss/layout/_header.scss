@@ -6,10 +6,19 @@
   z-index: map-get($z-index, 'header');
   width: 100%;
   background-color: var(--white-color);
+  transition: box-shadow 300ms ease-out;
+
+  &.scroll {
+    box-shadow: 0 -6px 10px -10px rgb(0 0 0 / 25%);
+  }
 
   @include breakpoint('x-large') {
     top: 0;
     bottom: unset;
+
+    &.scroll {
+      box-shadow: 0 6px 10px -10px rgb(0 0 0 / 25%);
+    }
   }
 
   &__navigation {
