@@ -1,0 +1,16 @@
+#team {
+  background: url('../../../assets/images/team-background-image.svg') no-repeat
+    0.625rem 10.375rem/111%;
+}
+
+.team {
+  &__text {
+    text-align: center;
+    margin-bottom: 2.625rem;
+  }
+
+  &__subtitle {
+    font-weight: var(--semibold-font);
+    font-size: var(--smaller-font-size);
+  }
+}
