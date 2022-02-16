@@ -6,7 +6,8 @@
   }
 
   &__image {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.375rem;
     margin-bottom: calc(3.2262rem + 3.195rem);
 

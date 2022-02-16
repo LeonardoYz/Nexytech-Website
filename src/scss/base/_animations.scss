@@ -5,3 +5,41 @@
     visibility: visible;
   }
 }
+
+@keyframes nLogoAnim {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-120px);
+  }
+}
+
+@keyframes nLogoCompleteAnim {
+  0% {
+    transform: translateX(-188px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(-136.5px);
+    opacity: 1;
+  }
+}
+
+@keyframes loading {
+  to {
+    width: 10%;
+  }
+}
+
+@keyframes loadingEnding {
+  0% {
+    width: 10%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
