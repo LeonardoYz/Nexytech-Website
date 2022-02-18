@@ -1,0 +1,16 @@
+.more {
+  &__text {
+    margin-bottom: 2.0625rem;
+  }
+
+  &__title {
+    margin-bottom: 0.375rem;
+  }
+
+  &__subtitle {
+    font-weight: var(--semibold-font);
+    font-size: var(--smaller-font-size);
+    line-height: initial;
+    width: 90%;
+  }
+}
