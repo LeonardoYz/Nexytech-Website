@@ -1,12 +1,12 @@
 @import "variables";
 
 @font-face {
-  font-family: "#{$icomoon-font-family}";
-  src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?x05nqu");
-  src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?x05nqu#iefix") format("embedded-opentype"),
-    url("#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?x05nqu") format("truetype"),
-    url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff?x05nqu") format("woff"),
-    url("#{$icomoon-font-path}/#{$icomoon-font-family}.svg?x05nqu##{$icomoon-font-family}") format("svg");
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?jcgkgu');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?jcgkgu#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?jcgkgu') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?jcgkgu') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?jcgkgu##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -14,7 +14,7 @@
 
 i {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "#{$icomoon-font-family}" !important;
+  font-family: '#{$icomoon-font-family}' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -27,158 +27,159 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.failed-icon {
+.icon-Star {
   &:before {
-    content: $failed-icon;
+    content: $icon-Star; 
   }
 }
-.about-icon {
+.icon-failed-icon {
   &:before {
-    content: $about-icon;
+    content: $icon-failed-icon; 
   }
 }
-.arrow-up-icon {
+.icon-about-icon {
   &:before {
-    content: $arrow-up-icon;
+    content: $icon-about-icon; 
   }
 }
-.back-end-icon {
+.icon-arrow-up-icon {
   &:before {
-    content: $back-end-icon;
+    content: $icon-arrow-up-icon; 
   }
 }
-.checkmark-icon {
+.icon-back-end-icon {
   &:before {
-    content: $checkmark-icon;
+    content: $icon-back-end-icon; 
   }
 }
-.close-icon {
+.icon-checkmark-icon {
   &:before {
-    content: $close-icon;
+    content: $icon-checkmark-icon; 
   }
 }
-.company-icon {
+.icon-close-icon {
   &:before {
-    content: $company-icon;
+    content: $icon-close-icon; 
   }
 }
-.email-icon {
+.icon-company-icon {
   &:before {
-    content: $email-icon;
+    content: $icon-company-icon; 
   }
 }
-.email-icon_outline {
+.icon-email-icon {
   &:before {
-    content: $email-icon_outline;
+    content: $icon-email-icon; 
   }
 }
-.facebook-icon {
+.icon-email-icon_outline {
   &:before {
-    content: $facebook-icon;
+    content: $icon-email-icon_outline; 
   }
 }
-.five-stars-icon {
+.icon-facebook-icon {
   &:before {
-    content: $five-stars-icon;
+    content: $icon-facebook-icon; 
   }
 }
-.front-end-icon {
+.icon-front-end-icon {
   &:before {
-    content: $front-end-icon;
+    content: $icon-front-end-icon; 
   }
 }
-.gear-icon {
+.icon-gear-icon {
   &:before {
-    content: $gear-icon;
+    content: $icon-gear-icon; 
   }
 }
-.home-icon {
+.icon-home-icon {
   &:before {
-    content: $home-icon;
+    content: $icon-home-icon; 
   }
 }
-.instagram-icon {
+.icon-instagram-icon {
   &:before {
-    content: $instagram-icon;
+    content: $icon-instagram-icon; 
   }
 }
-.left-curved-arrow {
+.icon-left-curved-arrow {
   &:before {
-    content: $left-curved-arrow;
+    content: $icon-left-curved-arrow; 
   }
 }
-.linkedin-icon {
+.icon-linkedin-icon {
   &:before {
-    content: $linkedin-icon;
+    content: $icon-linkedin-icon; 
   }
 }
-.mobile-menu-icon {
+.icon-mobile-menu-icon {
   &:before {
-    content: $mobile-menu-icon;
+    content: $icon-mobile-menu-icon; 
   }
 }
-.moon-icon {
+.icon-moon-icon {
   &:before {
-    content: $moon-icon;
+    content: $icon-moon-icon; 
   }
 }
-.phone-icon {
+.icon-phone-icon {
   &:before {
-    content: $phone-icon;
+    content: $icon-phone-icon; 
   }
 }
-.quote-icon {
+.icon-quote-icon {
   &:before {
-    content: $quote-icon;
+    content: $icon-quote-icon; 
   }
 }
-.right-curved-arrow {
+.icon-right-curved-arrow {
   &:before {
-    content: $right-curved-arrow;
+    content: $icon-right-curved-arrow; 
   }
 }
-.rocket-icon {
+.icon-rocket-icon {
   &:before {
-    content: $rocket-icon;
+    content: $icon-rocket-icon; 
   }
 }
-.services-icon {
+.icon-services-icon {
   &:before {
-    content: $services-icon;
+    content: $icon-services-icon; 
   }
 }
-.straight-arrow-icon {
+.icon-straight-arrow-icon {
   &:before {
-    content: $straight-arrow-icon;
+    content: $icon-straight-arrow-icon; 
   }
 }
-.sun-icon {
+.icon-sun-icon {
   &:before {
-    content: $sun-icon;
+    content: $icon-sun-icon; 
   }
 }
-.team-icon {
+.icon-team-icon {
   &:before {
-    content: $team-icon;
+    content: $icon-team-icon; 
   }
 }
-.tech-icon {
+.icon-tech-icon {
   &:before {
-    content: $tech-icon;
+    content: $icon-tech-icon; 
   }
 }
-.testimonial-icon {
+.icon-testimonial-icon {
   &:before {
-    content: $testimonial-icon;
+    content: $icon-testimonial-icon; 
   }
 }
-.user-icon {
+.icon-user-icon {
   &:before {
-    content: $user-icon;
+    content: $icon-user-icon; 
   }
 }
-.ux-ui-design-icon {
+.icon-ux-ui-design-icon {
   &:before {
-    content: $ux-ui-design-icon;
+    content: $icon-ux-ui-design-icon; 
   }
 }
+

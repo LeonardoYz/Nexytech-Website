@@ -10,8 +10,6 @@
   /*========== Colors ==========*/
   --hue: 205;
 
-  --dark: hsl(0, 0%, 10%);
-  --dark-alt: hsl(0, 0%, 15%);
   --grayish-blue: hsl(215, 19%, 40%);
   --primary-color: hsl(var(--hue), 84%, 55%);
   --primary-color-hover: hsl(var(--hue), 84%, 45%);
@@ -23,6 +21,8 @@
   --green-color-low-opacity: hsl(156, 84%, 93%);
   --yellow-color-low-opacity: hsl(55, 71%, 93%);
   --red-color-low-opacity: hsl(0, 84%, 93%);
+  --secondary-color: hsl(0, 0%, 10%);
+  --secondary-color-alt: hsl(0, 0%, 15%);
   --white-color: hsl(0, 0%, 100%);
   --dark-grey: hsl(0, 0%, 65%);
   --input-color: hsl(0, 0%, 80%);

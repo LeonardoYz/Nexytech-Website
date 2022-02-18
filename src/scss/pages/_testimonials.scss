@@ -1,0 +1,106 @@
+@use '../abstracts' as *;
+
+#testimonials .container {
+  margin: 0;
+}
+
+.testimonials {
+  &__title {
+    margin: 0 1.5625rem calc(3.8006rem - 0.75rem);
+  }
+
+  &__box {
+    position: relative;
+    padding: 38.13px 24px 38.12px 25px;
+    background-color: var(--white-color);
+    box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.2);
+    @include border-radius('10');
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.0662rem;
+
+    img {
+      width: 3.125rem;
+    }
+
+    &--details {
+      display: flex;
+      flex-direction: column;
+
+      cite {
+        font: var(--bold-font) var(--normal-font-size) var(--lexend-font-family);
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+
+  &__assessment {
+    display: flex;
+    gap: 0.1875rem;
+
+    i {
+      font-size: 0.625rem;
+    }
+
+    &.green-color {
+      i {
+        color: var(--green-color);
+      }
+    }
+
+    &.yellow-color {
+      i {
+        color: var(--yellow-color);
+
+        &:last-child {
+          color: var(--light-gray);
+        }
+      }
+    }
+
+    &.blue-color {
+      i {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  &__quote {
+    i {
+      position: absolute;
+      z-index: map-get($z-index, 'negative');
+      top: 2.5931rem;
+      right: 1.5rem;
+      font-size: 2.9375rem;
+
+      &.green-color {
+        color: var(--green-color-low-opacity);
+      }
+
+      &.yellow-color {
+        color: var(--yellow-color-low-opacity);
+      }
+
+      &.blue-color {
+        color: var(--primary-color-low-opacity);
+      }
+    }
+  }
+}
+
+.swiper {
+  padding: 0.75rem 1.5625rem 3.4375rem;
+}
+
+.swiper-pagination-bullet {
+  width: 0.5625rem;
+  height: 0.5625rem;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary-color);
+}
