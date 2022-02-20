@@ -11,6 +11,7 @@ html {
 }
 
 body {
+  position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -29,6 +30,7 @@ ul {
   list-style: none;
 }
 
-button {
+button,
+input[type='submit'] {
   border: none;
 }

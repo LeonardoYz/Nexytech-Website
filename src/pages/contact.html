@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../../assets/images/nexytech-n-logo.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../../assets/icons/style.css" />
+    <link rel="stylesheet" href="../../public/css/main.css" />
+    <script src="../js/main.js" defer></script>
+    <title>Nexytech</title>
+  </head>
+  <body>
+    <div class="preloading">
+      <div class="preloading__logo">
+        <img
+          src="../../assets/images/nexytech-n-logo.svg"
+          alt="Nexytech logo"
+        />
+        <img
+          src="../../assets/images/nexytech-logo-complete.svg"
+          alt="Nexytech logo"
+        />
+      </div>
+
+      <div class="preloading__progress-bar">
+        <div class="preloading__fill"></div>
+      </div>
+
+      <div class="preloading__wave-bg"></div>
+    </div>
+
+    <header class="header">
+      <nav class="header__navigation container">
+        <div class="header__logo">
+          <a href="../../index.html">
+            <img
+              src="../../assets/images/nexytech-n-logo.svg"
+              alt="Nexytech Logo"
+            />
+            <img
+              src="../../assets/images/nexytech-logo-complete.svg"
+              alt="Nexytech Logo"
+            />
+          </a>
+        </div>
+
+        <div class="header__back-to-home">
+          <a href="../../index.html" class="button"
+            ><i class="left-curved-arrow"></i> Voltar ao início</a
+          >
+        </div>
+
+        <button
+          type="button"
+          class="theme-switcher"
+          id="theme-switcher--contact"
+          aria-label="Botão para trocar tema"
+        >
+          <span>Trocar tema</span>
+          <i class="moon-icon"></i>
+        </button>
+      </nav>
+    </header>
+
+    <div class="contact__background one"></div>
+    <div class="contact__background two"></div>
+    <section class="contact">
+      <div class="contact__container">
+        <div class="contact__content">
+          <div class="contact__details">
+            <div class="contact__text">
+              <h1 class="contact__title">Entrar em contato</h1>
+              <p class="contact__paragraph">
+                Preencha este formulario e nosso time ira retornar dentro de
+                24h.
+              </p>
+            </div>
+
+            <div class="contact__information">
+              <div class="contact__address box">
+                <i class="company-icon"></i>
+                <p>Lorem ipsum dolor sit amet</p>
+              </div>
+
+              <div class="contact__phone box">
+                <i class="phone-icon"></i>
+                <p>11 93472 7483</p>
+              </div>
+
+              <div class="contact__email box">
+                <i class="email-icon"></i>
+                <p>Exemplo@nexytech.com</p>
+              </div>
+            </div>
+
+            <div class="contact__social">
+              <ul>
+                <li>
+                  <a
+                    href="https://facebook.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="facebook-icon"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="instagram-icon"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="linkedin-icon"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <form action="#" class="contact__form">
+            <div class="contact__input-box">
+              <label for="first-name" class="contact__label"
+                >Primeiro nome</label
+              >
+              <input type="text" class="contact__input" id="first-name" />
+              <i class="user-icon contact__icon"></i>
+            </div>
+
+            <div class="contact__input-box">
+              <label for="email" class="contact__label">Email</label>
+              <input type="email" class="contact__input" id="email" />
+              <i class="email-icon_outline contact__icon"></i>
+            </div>
+
+            <div class="contact__input-box">
+              <label for="message" class="contact__label">Mensagem</label>
+              <textarea
+                id="message"
+                cols="30"
+                rows="10"
+                class="contact__input text-area"
+              ></textarea>
+            </div>
+
+            <div class="contact__submit">
+              <input type="submit" class="button" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

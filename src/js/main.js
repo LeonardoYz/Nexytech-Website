@@ -18,15 +18,17 @@ const headerNavigation = document.querySelector(".header__navigation")
 const mobileMenu = document.querySelector(".header__menu--mobile")
 const headerNavigationLinks = document.querySelectorAll(".header__menu li a")
 
-mobileMenu.addEventListener("click", () => {
-  headerNavigation.classList.toggle("show")
+if (document.body.contains(mobileMenu)) {
+  mobileMenu.addEventListener("click", () => {
+    headerNavigation.classList.toggle("show")
 
-  headerNavigationLinks.forEach((element) => {
-    element.addEventListener("click", () => {
-      headerNavigation.classList.remove("show")
+    headerNavigationLinks.forEach((element) => {
+      element.addEventListener("click", () => {
+        headerNavigation.classList.remove("show")
+      })
     })
   })
-})
+}
 
 const header = document.querySelector(".header")
 const headerHeight = header.offsetHeight

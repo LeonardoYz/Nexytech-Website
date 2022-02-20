@@ -8,16 +8,14 @@
   }
 
   /*========== Colors ==========*/
-  --hue: 205;
-
   --grayish-blue: hsl(215, 19%, 40%);
-  --primary-color: hsl(var(--hue), 84%, 55%);
-  --primary-color-hover: hsl(var(--hue), 84%, 45%);
+  --primary-color: hsl(205, 84%, 55%);
+  --primary-color-hover: hsl(205, 84%, 45%);
   --green-color: hsl(151, 100%, 43%);
   --yellow-color: hsl(46, 97%, 63%);
   --red-color: hsl(0, 61%, 55%);
   --light-gray: hsl(0, 0%, 85%);
-  --primary-color-low-opacity: hsl(var(--hue), 84%, 93%);
+  --primary-color-low-opacity: hsl(205, 84%, 93%);
   --green-color-low-opacity: hsl(156, 84%, 93%);
   --yellow-color-low-opacity: hsl(55, 71%, 93%);
   --red-color-low-opacity: hsl(0, 84%, 93%);
