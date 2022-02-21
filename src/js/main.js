@@ -41,6 +41,19 @@ function addShadowOnHeaderWhenScroll() {
   }
 }
 
+const backToTopButton = document.querySelector('.back-to-top')
+
+function backToTop() {
+  if (window.scrollY >= 560) {
+    backToTopButton.classList.add('scroll')
+  } else {
+    backToTopButton.classList.remove('scroll')
+  }
+}
+
 window.addEventListener("scroll", () => {
   addShadowOnHeaderWhenScroll()
+  if (document.body.contains(backToTopButton)) {
+    backToTop()
+  }
 })

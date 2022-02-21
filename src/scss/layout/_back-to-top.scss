@@ -1,0 +1,78 @@
+@use '../abstracts' as *;
+
+.back-to-top {
+  position: fixed;
+  right: 0.9375rem;
+  bottom: 0;
+  z-index: map-get($z-index, 'default');
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--primary-color);
+    @include border-radius('100');
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0);
+    transition: transform 300ms ease-in-out, opacity 300ms ease-out;
+
+    .arrow-up-icon {
+      font-size: 1.5625rem;
+      color: var(--white-color);
+    }
+  }
+
+  &.scroll {
+    a {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(calc(-1.25rem - 4.0625rem));
+    }
+  }
+
+  @include breakpoint('x-large') {
+    right: unset;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__line {
+      height: 0.3125rem;
+      width: 10.4375rem;
+      background-color: var(--primary-color);
+      border-radius: 0.625rem 0.625rem 0 0;
+      opacity: 0;
+      transform: scaleX(0);
+      transition: transform 300ms ease-in-out, opacity 300ms ease-out;
+    }
+
+    &.scroll {
+      a {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+
+      .back-to-top__line {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+
+      &:hover {
+        a {
+          transform: translateY(-10px);
+          opacity: 1;
+        }
+
+        .back-to-top__line {
+          transform: scaleX(0);
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
