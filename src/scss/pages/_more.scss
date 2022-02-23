@@ -1,6 +1,23 @@
+@use '../abstracts' as *;
+
+#more {
+  .container {
+    @include breakpoint('large') {
+      max-width: 775px;
+      display: flex;
+      align-items: center;
+      gap: 2.25rem;
+    }
+  }
+}
+
 .more {
   &__text {
     margin-bottom: 2.0625rem;
+
+    @include breakpoint('large') {
+      margin: 0;
+    }
   }
 
   &__title {
@@ -12,5 +29,19 @@
     font-size: var(--smaller-font-size);
     line-height: initial;
     width: 90%;
+
+    @include breakpoint('medium') {
+      position: relative;
+      top: -0.5rem;
+    }
+  }
+
+  &__button {
+    .button {
+      @include breakpoint('large') {
+        position: relative;
+        top: 0.25rem;
+      }
+    }
   }
 }

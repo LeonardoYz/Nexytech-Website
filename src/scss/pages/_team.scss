@@ -1,17 +1,53 @@
+@use '../abstracts' as *;
+
 #team {
   background: url('../../../assets/images/team-background-image.svg') no-repeat
-    0.625rem 10.375rem/111%;
+    0.5625rem 12.375rem/100%;
+
+  @include breakpoint('medium') {
+    background: url('../../../assets/images/team-background-image.svg')
+      no-repeat 0.5625rem 16.375rem/100%;
+  }
+
+  @include breakpoint('large') {
+    background: url('../../../assets/images/team-background-image.svg')
+      no-repeat center 19.5625rem/67.75rem;
+  }
+
+  .container {
+    @include breakpoint('large') {
+      max-width: 960px;
+    }
+
+    @include breakpoint('x-large') {
+      max-width: 979px;
+    }
+  }
 }
 
 .team {
   &__text {
     text-align: center;
     margin-bottom: 2.625rem;
+
+    @include breakpoint('medium') {
+      margin-bottom: 3rem;
+    }
+
+    @include breakpoint('large') {
+      margin-bottom: 4rem;
+    }
   }
 
   &__subtitle {
     font-weight: var(--semibold-font);
     font-size: var(--smaller-font-size);
     line-height: initial;
+  }
+
+  &__image {
+    img {
+      @include border-radius('10');
+    }
   }
 }

@@ -6,6 +6,10 @@
   bottom: 0;
   z-index: map-get($z-index, 'default');
 
+  @include breakpoint('medium') {
+    right: 1.35rem;
+  }
+
   a {
     display: flex;
     justify-content: center;
@@ -33,7 +37,7 @@
     }
   }
 
-  @include breakpoint('x-large') {
+  @include breakpoint('large') {
     right: unset;
     left: 50%;
     transform: translateX(-50%);

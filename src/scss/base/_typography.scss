@@ -16,16 +16,28 @@ h3 {
 h1 {
   font-size: var(--h1-font-size);
   line-height: 2.5rem;
+
+  @include breakpoint('medium') {
+    line-height: 3.125rem;
+  }
 }
 
 h2 {
   font-size: var(--h2-font-size);
   line-height: 2.4375rem;
+
+  @include breakpoint('medium') {
+    line-height: 2.875rem;
+  }
 }
 
 h3 {
   font-size: var(--h3-font-size);
   line-height: 2.1875rem;
+
+  @include breakpoint('medium') {
+    line-height: 3.125rem;
+  }
 }
 
 p {

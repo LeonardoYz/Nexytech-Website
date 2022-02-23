@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Empresa referência no mercado de desenvolvimento web e mobile, que entrega aplicações sob demanda."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -48,7 +52,7 @@
     <header class="header">
       <nav class="header__navigation container">
         <div class="header__logo">
-          <a href="#">
+          <a href="#home">
             <img src="assets/images/nexytech-n-logo.svg" alt="Nexytech Logo" />
             <img
               src="assets/images/nexytech-logo-complete.svg"
@@ -225,17 +229,17 @@
             <p class="services__paragraph">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-          </div>
 
-          <div class="services__details">
-            <div class="services__box">
-              <i class="checkmark-icon"></i>
-              <span>Estratégia em SEO</span>
-            </div>
+            <div class="services__details">
+              <div class="services__box">
+                <i class="checkmark-icon"></i>
+                <span>Estratégia em SEO</span>
+              </div>
 
-            <div class="services__box">
-              <i class="checkmark-icon"></i>
-              <span>Otimização e Performance</span>
+              <div class="services__box">
+                <i class="checkmark-icon"></i>
+                <span>Otimização e Performance</span>
+              </div>
             </div>
           </div>
 
@@ -293,12 +297,12 @@
           </h2>
 
           <div class="swiper">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper testimonials__wrapper">
               <div class="testimonials__box swiper-slide">
                 <blockquote>
                   <div class="testimonials__user">
                     <img
-                      src="assets/images/testimonials-picture-1.jpg"
+                      src="assets/images/testimonials-picture-1.png"
                       alt="Foto de Isabella Vieira"
                     />
                     <div class="testimonials__user--details">
@@ -329,7 +333,7 @@
                 <blockquote>
                   <div class="testimonials__user">
                     <img
-                      src="assets/images/testimonials-picture-2.jpg"
+                      src="assets/images/testimonials-picture-2.png"
                       alt="Foto de Samuel Lima"
                     />
                     <div class="testimonials__user--details">
@@ -360,7 +364,7 @@
                 <blockquote>
                   <div class="testimonials__user">
                     <img
-                      src="assets/images/testimonials-picture-3.jpg"
+                      src="assets/images/testimonials-picture-3.png"
                       alt="Foto de Enzo Alves"
                     />
                     <div class="testimonials__user--details">
@@ -404,7 +408,9 @@
           </div>
 
           <div class="more__button">
-            <a class="button" href="#">Entrar em contato</a>
+            <a href="src/pages/contact.html" class="button"
+              >Entrar em contato</a
+            >
           </div>
         </div>
       </section>
@@ -415,7 +421,7 @@
         <div class="footer__wrapper">
           <div class="footer__text">
             <div class="footer__logo">
-              <a href="#">
+              <a href="#home">
                 <img
                   src="assets/images/nexytech-n-logo.svg"
                   alt="Nexytech logo"
@@ -452,6 +458,7 @@
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Link para o facebook"
                   ><i class="facebook-icon"></i
                 ></a>
               </li>
@@ -460,6 +467,7 @@
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Link para o instagram"
                   ><i class="instagram-icon"></i
                 ></a>
               </li>
@@ -468,6 +476,7 @@
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Link para o linkedin"
                   ><i class="linkedin-icon"></i
                 ></a>
               </li>

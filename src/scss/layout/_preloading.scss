@@ -17,13 +17,8 @@
     opacity: 0;
   }
 
-  &__wave-bg {
-    background: url('../../../assets/images/waves-bg.svg') no-repeat;
-    background-size: cover;
-    height: 12.5rem;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
+  @include breakpoint('x-large') {
+    gap: 5.375rem;
   }
 
   &__logo {
@@ -32,15 +27,23 @@
     img {
       &:first-child {
         width: 4.5rem;
+
         animation: nLogoAnim 400ms forwards ease-in-out;
+
+        @include breakpoint('x-large') {
+          width: 6.25rem;
+        }
       }
 
       &:last-child {
         width: 16.2rem;
         position: absolute;
         opacity: 0;
-        transform: translateX(-188px);
         animation: nLogoCompleteAnim 400ms 400ms forwards ease-in-out;
+
+        @include breakpoint('x-large') {
+          width: 22.4375rem;
+        }
       }
     }
   }
@@ -54,6 +57,10 @@
     width: 20.8125rem;
     height: 0.375rem;
     background-color: var(--loading-bar-bg-color);
+
+    @include breakpoint('x-large') {
+      width: 32.0625rem;
+    }
   }
 
   &__fill {
@@ -64,6 +71,19 @@
 
     &.loading-ending {
       animation: loadingEnding 1000ms forwards ease-in-out;
+    }
+  }
+
+  &__wave-bg {
+    background: url('../../../assets/images/waves-bg.svg') no-repeat;
+    background-size: cover;
+    height: 12.5rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
+    @include breakpoint('x-large') {
+      height: 17.8125rem;
     }
   }
 }

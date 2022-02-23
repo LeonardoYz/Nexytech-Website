@@ -1,8 +1,25 @@
 @use '../abstracts' as *;
 
+#home {
+  @include breakpoint('large') {
+    padding: calc(var(--header-height) + 4.125rem) 0 6.4375rem;
+  }
+}
+
 .home {
   &__cta {
     margin-bottom: 3.0625rem;
+
+    @include breakpoint('large') {
+      display: flex;
+      gap: 3.0625rem;
+      margin-bottom: calc(2.9375rem + 3.195rem);
+    }
+
+    @include breakpoint('x-large') {
+      gap: 5.0625rem;
+      margin-bottom: calc(2.9375rem + 5.0625rem);
+    }
   }
 
   &__image {
@@ -11,14 +28,52 @@
     gap: 0.375rem;
     margin-bottom: calc(3.2262rem + 3.195rem);
 
+    img {
+      @include border-radius('20');
+    }
+
     img:nth-child(2) {
       position: relative;
       top: 3.195rem;
+    }
+
+    @include breakpoint('medium') {
+      gap: 0.625rem;
+      margin-bottom: calc(3.8rem + 3.195rem);
+    }
+
+    @include breakpoint('large') {
+      order: 1;
+      flex: 1;
+      margin: 0;
+    }
+
+    @include breakpoint('x-large') {
+      img:nth-child(2) {
+        top: 5.0625rem;
+      }
+    }
+  }
+
+  &__text {
+    @include breakpoint('large') {
+      align-self: center;
+      flex-basis: 30.4375rem;
+      position: relative;
+      top: 1.875rem;
+    }
+
+    @include breakpoint('x-large') {
+      flex-basis: 36.4375rem;
     }
   }
 
   &__title {
     margin-bottom: 2.0625rem;
+
+    @include breakpoint('medium') {
+      margin-bottom: 2.3125rem;
+    }
   }
 
   &__button {
@@ -46,9 +101,33 @@
     flex-direction: column;
     gap: 1.125rem;
 
+    @include breakpoint('medium') {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+    }
+
+    @include breakpoint('large') {
+      display: flex;
+      flex-direction: row;
+      gap: 3.5rem;
+    }
+
+    @include breakpoint('x-large') {
+      gap: 4.8125rem;
+    }
+
     .card {
       &__box {
         padding: 3.25rem 0 2rem;
+
+        @include breakpoint('medium') {
+          padding: 3.25rem 1rem 2rem 1.3rem;
+        }
+
+        @include breakpoint('x-large') {
+          padding: 3.3125rem 1.4375rem 2rem 1.8125rem;
+        }
 
         &.process {
           .card__icon {

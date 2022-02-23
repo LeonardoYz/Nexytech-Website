@@ -7,6 +7,10 @@
   background-color: transparent;
   cursor: pointer;
 
+  @include breakpoint('medium') {
+    right: 5.3rem;
+  }
+
   span {
     display: none;
   }
@@ -15,7 +19,7 @@
     font-size: 1.3125rem;
   }
 
-  @include breakpoint('x-large') {
+  @include breakpoint('large') {
     display: flex;
     justify-content: center;
     align-items: center;

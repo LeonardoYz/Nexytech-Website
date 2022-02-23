@@ -1,18 +1,46 @@
 @use '../abstracts' as *;
 
+#services .container {
+  @include breakpoint('large') {
+    display: flex;
+    gap: 6.9375rem;
+    max-width: 960px;
+  }
+
+  @include breakpoint('x-large') {
+    gap: 7.9375rem;
+    max-width: 979px;
+  }
+}
+
 .services {
   &__text {
-    margin-bottom: 2.375rem;
+    margin-bottom: 4.4375rem;
+
+    @include breakpoint('large') {
+      flex-basis: 19.375rem;
+      align-self: center;
+      margin: 0;
+      position: relative;
+      top: 0.625rem;
+    }
   }
 
   &__title {
     margin-bottom: 1rem;
   }
 
+  &__paragraph {
+    margin-bottom: 2.375rem;
+
+    @include breakpoint('large') {
+      margin-bottom: 2.1875rem;
+    }
+  }
+
   &__details {
     display: grid;
     gap: 1rem;
-    margin-bottom: 4.5rem;
   }
 
   &__box {
@@ -26,8 +54,8 @@
       align-items: center;
       font-size: 0.8125rem;
       color: var(--white-color);
-      height: 25px;
-      width: 25px;
+      height: 1.5625rem;
+      width: 1.5625rem;
       background-color: var(--primary-color);
       @include border-radius('100');
     }
@@ -42,8 +70,36 @@
     display: grid;
     gap: 5.0625rem;
 
+    @include breakpoint('medium') {
+      row-gap: 3.375rem;
+      column-gap: 3.875rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint('large') {
+      flex: 1;
+    }
+
     .card {
       &__box {
+        @include breakpoint('medium') {
+          padding: 2.5625rem 1.3125rem 3.6875rem 1.75rem;
+          box-shadow: 0px 5px 32px -9px rgba(0, 0, 0, 0.2);
+          background-color: var(--white-color);
+          @include border-radius('10');
+        }
+
+        @include breakpoint('large') {
+          &:first-child {
+            position: relative;
+            top: 11.25rem;
+          }
+
+          &:nth-child(3) {
+            grid-column: 2 / 3;
+          }
+        }
+
         i {
           font-size: 3.4375rem;
           display: block;

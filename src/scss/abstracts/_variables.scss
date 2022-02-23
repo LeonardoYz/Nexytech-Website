@@ -3,7 +3,7 @@
 :root {
   --header-height: 4.0625rem;
 
-  @include breakpoint('x-large') {
+  @include breakpoint('large') {
     --header-height: 6.4375rem;
   }
 
@@ -40,6 +40,13 @@
   --small-font-size-alt: 0.8125rem;
   --smaller-font-size: 0.75rem;
 
+  @include breakpoint('medium') {
+    --h1-font-size: 2.3125rem;
+    --h2-font-size: 2.0625rem;
+    --h3-font-size: 1.6875rem;
+    --smaller-font-size: 0.875rem;
+  }
+
   /*========== Font Weight ==========*/
   --regular-font: 400;
   --medium-font: 500;
@@ -59,6 +66,7 @@ $z-index: (
 /*==== Container Width and Margin =========================*/
 $container: (
   'small': 0 1.5625rem,
-  'large': 992px,
+  'medium': 0 2.1875rem,
+  'large': 960px,
   'x-large': 1180px
 );

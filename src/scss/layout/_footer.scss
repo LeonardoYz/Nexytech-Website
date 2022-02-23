@@ -4,8 +4,27 @@
   padding: 4.125rem 0 5.9375rem;
   background-color: var(--secondary-color);
 
+  @include breakpoint('large') {
+    padding: 3.4375rem 0 2rem;
+  }
+
+  &__wrapper {
+    margin-bottom: 2rem;
+
+    @include breakpoint('large') {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3.6875rem;
+    }
+  }
+
   &__logo {
     margin-bottom: 3.375rem;
+
+    @include breakpoint('large') {
+      margin-bottom: 3.125rem;
+    }
 
     a {
       position: relative;
@@ -20,8 +39,8 @@
         display: none;
       }
 
-      @include breakpoint('x-large') {
-        display: flex;
+      @include breakpoint('large') {
+        display: inline-flex;
         align-items: center;
 
         img:last-child {
@@ -53,6 +72,10 @@
     gap: 1.9375rem;
     margin-bottom: 3.125rem;
 
+    @include breakpoint('large') {
+      margin: 0;
+    }
+
     .box {
       display: flex;
       align-items: center;
@@ -70,8 +93,6 @@
   }
 
   &__social {
-    margin-bottom: 2rem;
-
     ul {
       display: flex;
       justify-content: center;
@@ -112,12 +133,21 @@
     width: 100%;
     background-color: var(--light-gray);
     margin-bottom: 1.0625rem;
+
+    @include breakpoint('large') {
+      margin-bottom: 1.875rem;
+    }
   }
 
   &__rights {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+
+    @include breakpoint('large') {
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
     span {
       color: var(--light-gray);

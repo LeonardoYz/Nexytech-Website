@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 *,
 *::before,
 *::after {
@@ -8,12 +10,21 @@
 
 html {
   scroll-behavior: smooth;
+
+  @include breakpoint('large') {
+    scroll-padding-top: 4.4375rem;
+  }
+
+  @include breakpoint('x-large') {
+    scroll-padding-top: 6.4375rem;
+  }
 }
 
 body {
   position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 
 a {

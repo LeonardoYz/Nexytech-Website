@@ -3,12 +3,28 @@
 .container {
   margin: map-get($container, 'small');
 
-  @include breakpoint('x-large') {
+  @include breakpoint('medium') {
+    margin: map-get($container, 'medium');
+  }
+
+  @include breakpoint('large') {
     margin: 0 auto;
+    max-width: map-get($container, 'large');
+  }
+
+  @include breakpoint('x-large') {
     max-width: map-get($container, 'x-large');
   }
 }
 
 .section {
   padding: 4.375rem 0;
+
+  @include breakpoint('medium') {
+    padding: 5.5rem 0;
+  }
+
+  @include breakpoint('large') {
+    padding: 6.4375rem 0;
+  }
 }

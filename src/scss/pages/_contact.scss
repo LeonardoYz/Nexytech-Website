@@ -1,16 +1,18 @@
 @use '../abstracts' as *;
 
-.header {
-  @include breakpoint('x-large') {
+#contact-page-header {
+  @include breakpoint('large') {
     background-color: transparent;
   }
+}
 
+.header {
   &__back-to-home {
     .button {
       display: none;
       align-items: center;
       gap: 0.6875rem;
-      background-color: transparent;
+      background-color: var(--primary-color);
       border: 2px solid var(--white-color);
       box-shadow: none;
       padding: 0.875rem 1.875rem;
@@ -26,7 +28,7 @@
         }
       }
 
-      @include breakpoint('x-large') {
+      @include breakpoint('large') {
         display: flex;
       }
     }
@@ -36,39 +38,71 @@
 #theme-switcher--contact {
   right: 1.5rem;
 
-  @include breakpoint('x-large') {
+  @include breakpoint('medium') {
+    right: 2.1875rem;
+  }
+
+  @include breakpoint('large') {
     right: 1.875rem;
+  }
+}
+
+.background {
+  position: absolute;
+  z-index: map-get($z-index, 'negative');
+  width: 100%;
+
+  &.one {
+    top: 0;
+    background: url('../../../assets/images/blob-scene-bg-top-left_mobile.svg')
+      no-repeat left top;
+    height: 18.8125rem;
+
+    @include breakpoint('large') {
+      top: unset;
+      bottom: 0;
+      background: url('../../../assets/images/blob-scene-bg-left_desktop.svg')
+        no-repeat left bottom;
+      height: 42.6094rem;
+    }
+  }
+
+  &.two {
+    bottom: 0;
+    background: url('../../../assets/images/blob-scene-bg-bottom-right_mobile.svg')
+      no-repeat right bottom;
+    height: 18.3538rem;
+
+    @include breakpoint('large') {
+      top: 0;
+      bottom: unset;
+      background: url('../../../assets/images/blob-scene-bg-right_desktop.svg')
+        no-repeat right top;
+      height: 42.25rem;
+    }
   }
 }
 
 .contact {
   padding: 4.6875rem 0 5.7331rem;
 
-  &__background {
-    position: absolute;
-    z-index: map-get($z-index, 'negative');
-    width: 100%;
-
-    &.one {
-      top: 0;
-      background: url('../../../assets/images/blob-scene-bg-top-left_mobile.svg')
-        no-repeat left top;
-      height: 18.8125rem;
-    }
-
-    &.two {
-      bottom: 0;
-      background: url('../../../assets/images/blob-scene-bg-bottom-right_mobile.svg')
-        no-repeat right bottom;
-      height: 18.3538rem;
-    }
+  @include breakpoint('large') {
+    padding: calc(var(--header-height) + 6.375rem) 0 4.875rem;
   }
 
   &__container {
     margin: 0 0.9163rem 0 0.9375rem;
 
-    @include breakpoint('x-large') {
+    @include breakpoint('medium') {
+      margin: 0 2.1875rem;
+    }
+
+    @include breakpoint('large') {
       margin: 0 auto;
+      max-width: map-get($container, 'large');
+    }
+
+    @include breakpoint('x-large') {
       max-width: map-get($container, 'x-large');
     }
   }
@@ -81,20 +115,59 @@
     background-color: var(--white-color);
     box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.2);
     @include border-radius('20');
+
+    @include breakpoint('medium') {
+      padding: 4.6137rem 5.5625rem 5.1875rem 4rem;
+    }
+
+    @include breakpoint('large') {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 6rem;
+      padding: 4.6137rem 5.5625rem calc(5.1875rem + 2rem) 4rem;
+    }
+
+    @include breakpoint('x-large') {
+      gap: 16.8125rem;
+      padding: 4.6137rem 6.5625rem calc(5.1875rem + 2rem) 5rem;
+    }
+  }
+
+  &__details {
+    @include breakpoint('large') {
+      flex-basis: 23.375rem;
+    }
+
+    @include breakpoint('x-large') {
+      flex-basis: 24.375rem;
+    }
   }
 
   &__text {
     margin-bottom: 5rem;
+
+    @include breakpoint('large') {
+      margin-bottom: 5.5019rem;
+    }
   }
 
   &__title {
     margin-bottom: 0.9375rem;
+
+    @include breakpoint('large') {
+      margin-bottom: 1.0631rem;
+    }
   }
 
   &__information {
     display: grid;
     gap: 2.5rem;
     margin-bottom: 5rem;
+
+    @include breakpoint('large') {
+      gap: 2.8125rem;
+      margin-bottom: 8rem;
+    }
 
     .box {
       display: flex;
@@ -112,11 +185,24 @@
       display: flex;
       align-items: center;
       gap: 3.125rem;
+
+      @include breakpoint('large') {
+        gap: 3.75rem;
+      }
     }
 
     i {
       font-size: 1.4375rem;
       color: var(--primary-color);
+    }
+  }
+
+  &__form {
+    @include breakpoint('large') {
+      position: relative;
+      top: 2rem;
+      flex: 1;
+      align-self: flex-end;
     }
   }
 

@@ -2,19 +2,53 @@
 
 #testimonials .container {
   margin: 0;
+
+  @include breakpoint('large') {
+    margin: 0 auto;
+  }
+
+  @include breakpoint('x-large') {
+    max-width: map-get($container, 'x-large');
+  }
 }
 
 .testimonials {
   &__title {
     margin: 0 1.5625rem calc(3.8006rem - 0.75rem);
+
+    @include breakpoint('medium') {
+      width: 36.8125rem;
+      margin: 0 auto calc(5.5rem - 0.75rem);
+      text-align: center;
+    }
+
+    @include breakpoint('large') {
+      margin: 0 auto calc(6.5rem - 0.75rem);
+    }
+
+    @include breakpoint('x-large') {
+      margin: 0 auto 6.5rem;
+    }
+  }
+
+  &__wrapper {
+    @include breakpoint('x-large') {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 1.1875rem;
+    }
   }
 
   &__box {
     position: relative;
-    padding: 38.13px 24px 38.12px 25px;
+    padding: 2.3831rem 1.5rem 2.3825rem 1.5625rem;
     background-color: var(--white-color);
     box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.2);
     @include border-radius('10');
+
+    @include breakpoint('large') {
+      padding: 2.8125rem 2.375rem 2.625rem 1.875rem;
+    }
   }
 
   &__user {
@@ -23,8 +57,17 @@
     gap: 0.5rem;
     margin-bottom: 1.0662rem;
 
+    @include breakpoint('medium') {
+      margin-bottom: 1.2rem;
+    }
+
+    @include breakpoint('large') {
+      margin-bottom: 0.9375rem;
+    }
+
     img {
       width: 3.125rem;
+      @include border-radius('100');
     }
 
     &--details {
@@ -73,9 +116,15 @@
     i {
       position: absolute;
       z-index: map-get($z-index, 'negative');
-      top: 2.5931rem;
+      top: 2.75rem;
       right: 1.5rem;
       font-size: 2.9375rem;
+
+      @include breakpoint('large') {
+        top: 3.0225rem;
+        right: 2.375rem;
+        z-index: unset;
+      }
 
       &.green-color {
         color: var(--green-color-low-opacity);
@@ -94,11 +143,35 @@
 
 .swiper {
   padding: 0.75rem 1.5625rem 3.4375rem;
+
+  @include breakpoint('medium') {
+    padding: 0.75rem 2.1875rem 4.4rem;
+  }
+
+  @include breakpoint('large') {
+    padding: 0.75rem 1.5625rem 4.4rem;
+  }
+
+  @include breakpoint('x-large') {
+    padding: 0;
+    overflow: initial;
+  }
+}
+
+.swiper-pagination {
+  @include breakpoint('x-large') {
+    display: none;
+  }
 }
 
 .swiper-pagination-bullet {
   width: 0.5625rem;
   height: 0.5625rem;
+
+  @include breakpoint('medium') {
+    width: 0.6875rem;
+    height: 0.6875rem;
+  }
 }
 
 .swiper-pagination-bullet-active {

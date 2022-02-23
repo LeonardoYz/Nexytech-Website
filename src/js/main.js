@@ -6,9 +6,9 @@ window.addEventListener("load", () => {
 
   setTimeout(() => {
     preloadingScreen.classList.add("hide")
-    preloadingProgressBar.classList.remove("loading-ending")
 
     setTimeout(() => {
+      preloadingProgressBar.classList.remove("loading-ending")
       preloadingScreen.style.visibility = "hidden"
     }, 500)
   }, 1540)

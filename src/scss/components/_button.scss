@@ -8,6 +8,7 @@
   font: var(--medium-font) var(--normal-font-size) var(--lexend-font-family);
   @include button-shadow;
   @include border-radius('5');
+  cursor: pointer;
   transition: background-color 280ms ease-in-out, box-shadow 280ms ease-in;
 
   &:hover,

@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 @keyframes mobileMenuFadeIn {
   to {
     bottom: 0;
@@ -16,6 +18,18 @@
   }
 }
 
+@include breakpoint('x-large') {
+  @keyframes nLogoAnim {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-170px);
+    }
+  }
+}
+
 @keyframes nLogoCompleteAnim {
   0% {
     transform: translateX(-188px);
@@ -25,6 +39,20 @@
   100% {
     transform: translateX(-136.5px);
     opacity: 1;
+  }
+}
+
+@include breakpoint('x-large') {
+  @keyframes nLogoCompleteAnim {
+    0% {
+      transform: translateX(-247px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateX(-193px);
+      opacity: 1;
+    }
   }
 }
 

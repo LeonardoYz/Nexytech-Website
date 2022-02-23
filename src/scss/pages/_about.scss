@@ -1,9 +1,28 @@
 @use '../abstracts' as *;
 
+#about {
+  .container {
+    @include breakpoint('large') {
+      display: flex;
+      gap: 9.5rem;
+    }
+  }
+}
+
 .about {
   &__image {
     position: relative;
     margin-bottom: calc(2.7731rem + 1.6875rem);
+
+    @include breakpoint('medium') {
+      margin-bottom: calc(2.7731rem + 2.5rem);
+    }
+
+    @include breakpoint('large') {
+      order: 1;
+      flex: 1;
+      margin: 0;
+    }
 
     &::before,
     img {
@@ -18,15 +37,39 @@
       height: 4.6rem;
       width: 4.6rem;
       background-color: var(--primary-color);
+
+      @include breakpoint('medium') {
+        left: -2.9375rem;
+        height: 6.875rem;
+        width: 6.875rem;
+      }
     }
 
     img {
       position: relative;
       top: 1.6875rem;
+
+      @include breakpoint('medium') {
+        top: 2.5rem;
+      }
+    }
+  }
+
+  &__text {
+    @include breakpoint('large') {
+      flex-basis: 23.6875rem;
+    }
+
+    @include breakpoint('x-large') {
+      flex-basis: 33.6875rem;
     }
   }
 
   &__title {
     margin-bottom: 1.375rem;
+
+    @include breakpoint('medium') {
+      margin-bottom: 1.625rem;
+    }
   }
 }
