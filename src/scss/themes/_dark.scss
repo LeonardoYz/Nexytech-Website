@@ -1,0 +1,11 @@
+body.dark-theme {
+  --grayish-blue: hsl(215, 19%, 85%);
+  --secondary-color: hsl(0, 0%, 100%);
+  --secondary-color-alt: hsl(0, 0%, 15%);
+  --neutral-color: hsl(0, 0%, 10%);
+  --dark-grey: hsl(0, 0%, 75%);
+  --input-color: hsl(0, 0%, 90%);
+  --footer-bg-color: hsl(0, 0%, 15%);
+  --scrollbar-bg-color: var(--secondary-color-alt);
+  --pagination-bullet-bg-color: #fff;
+}

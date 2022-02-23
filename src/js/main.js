@@ -57,3 +57,39 @@ window.addEventListener("scroll", () => {
     backToTop()
   }
 })
+
+const themeButton = document.querySelector('.theme-switcher')
+const switcherIcon = document.getElementById("switcher-icon")
+const darkTheme = 'dark-theme'
+const iconTheme = 'sun-icon'
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => switcherIcon.classList.contains(iconTheme) ? 'moon-icon' : 'sun-icon'
+
+function verifySelectedTheme() {
+  if (selectedTheme) {
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+    switcherIcon.classList[selectedIcon === 'moon-icon' ? 'add' : 'remove'](iconTheme)
+  }
+}
+
+verifySelectedTheme()
+
+themeButton.addEventListener('click', () => {
+  document.body.classList.toggle(darkTheme)
+  switcherIcon.classList.toggle(iconTheme)
+  localStorage.setItem('selected-theme', getCurrentTheme())
+  localStorage.setItem('selected-icon', getCurrentIcon())
+})
+
+function checkUserThemePreference() {
+  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    document.body.classList.add(darkTheme)
+    switcherIcon.classList.add(iconTheme)
+    verifySelectedTheme()
+  }
+}
+
+checkUserThemePreference()

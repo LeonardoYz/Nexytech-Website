@@ -30,13 +30,8 @@ function destroySwiperOrEnabled() {
       breakpoints: {
         768: {
           slidesPerView: 2,
-          spaceBetween: 30,
-        },
-
-        992: {
-          slidesPerView: 2,
-          spaceBetween: 40
-        },
+          spaceBetween: 40,
+        }
       },
 
       pagination: {

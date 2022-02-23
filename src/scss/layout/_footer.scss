@@ -2,7 +2,8 @@
 
 .footer {
   padding: 4.125rem 0 5.9375rem;
-  background-color: var(--secondary-color);
+  background-color: var(--footer-bg-color);
+  transition: background-color 300ms ease-in;
 
   @include breakpoint('large') {
     padding: 3.4375rem 0 2rem;

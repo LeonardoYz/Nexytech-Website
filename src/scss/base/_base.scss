@@ -25,6 +25,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
+  background-color: var(--neutral-color);
+  transition: background-color 300ms ease-in, color 300ms ease-in;
 }
 
 a {

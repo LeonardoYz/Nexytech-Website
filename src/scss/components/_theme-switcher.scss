@@ -7,6 +7,10 @@
   background-color: transparent;
   cursor: pointer;
 
+  i {
+    color: var(--secondary-color);
+  }
+
   @include breakpoint('medium') {
     right: 5.3rem;
   }
@@ -38,13 +42,13 @@
       font: var(--bold-font) var(--normal-font-size) var(--lexend-font-family);
       width: 10.9375rem;
       height: 3rem;
-      background-color: var(--white-color);
+      background-color: var(--neutral-color);
       color: var(--secondary-color);
       border: 0.125rem solid var(--primary-color);
       border-radius: 100vw;
       visibility: hidden;
       opacity: 0;
-      transition: opacity 300ms ease-in-out;
+      transition: opacity 300ms ease-in-out, background-color 300ms ease-in;
     }
 
     &:hover {

@@ -6,7 +6,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--light-gray);
+  background-color: var(--scrollbar-bg-color);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -20,7 +20,7 @@
 
 @supports (scrollbar-color: grey lightgrey) {
   * {
-    scrollbar-color: var(--primary-color) var(--light-gray);
+    scrollbar-color: var(--primary-color) var(--scrollbar-bg-color);
     scrollbar-width: 0.65rem;
   }
 }

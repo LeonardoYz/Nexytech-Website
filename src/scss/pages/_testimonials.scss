@@ -42,8 +42,9 @@
   &__box {
     position: relative;
     padding: 2.3831rem 1.5rem 2.3825rem 1.5625rem;
-    background-color: var(--white-color);
+    background-color: var(--secondary-color-alt);
     box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.2);
+    transition: background-color 300ms ease-in;
     @include border-radius('10');
 
     @include breakpoint('large') {
@@ -167,6 +168,10 @@
 .swiper-pagination-bullet {
   width: 0.5625rem;
   height: 0.5625rem;
+  background: var(
+    --swiper-pagination-bullet-inactive-color,
+    var(--pagination-bullet-bg-color)
+  );
 
   @include breakpoint('medium') {
     width: 0.6875rem;

@@ -112,9 +112,10 @@
     flex-direction: column;
     gap: 5rem;
     padding: 4.0625rem 1.625rem 2.8125rem;
-    background-color: var(--white-color);
+    background-color: var(--secondary-color-alt);
     box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.2);
     @include border-radius('20');
+    transition: background-color 300ms ease-in;
 
     @include breakpoint('medium') {
       padding: 4.6137rem 5.5625rem 5.1875rem 4rem;
@@ -241,6 +242,8 @@
     font: var(--regular-font) var(--small-font-size) var(--lexend-font-family);
     padding: 0.875rem 0.8125rem 0.875rem 2.8125rem;
     border: 2px solid var(--input-color);
+    background-color: transparent;
+    color: var(--secondary-color);
     width: 100%;
     outline: none;
     @include border-radius('5');

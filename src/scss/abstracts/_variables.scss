@@ -20,11 +20,15 @@
   --yellow-color-low-opacity: hsl(55, 71%, 93%);
   --red-color-low-opacity: hsl(0, 84%, 93%);
   --secondary-color: hsl(0, 0%, 10%);
-  --secondary-color-alt: hsl(0, 0%, 15%);
+  --secondary-color-alt: hsl(0, 0%, 100%);
+  --neutral-color: hsl(0, 0%, 100%);
   --white-color: hsl(0, 0%, 100%);
   --dark-grey: hsl(0, 0%, 65%);
   --input-color: hsl(0, 0%, 80%);
   --loading-bar-bg-color: hsl(0, 0%, 90%);
+  --footer-bg-color: hsl(0, 0%, 10%);
+  --scrollbar-bg-color: hsl(0, 0%, 85%);
+  --pagination-bullet-bg-color: #000;
 
   /*========== Font and Typography ==========*/
   --lexend-font-family: 'Lexend', sans-serif;
