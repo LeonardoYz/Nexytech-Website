@@ -1,5 +1,5 @@
 <div>
-  <a href="" target="_blank">
+  <a href="https://leonardoyz.github.io/Nexytech-Website/" target="_blank">
     <img width="60%" src="./readme-files/nexytech-logo-complete.svg">
   </a>
 </div>
@@ -21,8 +21,8 @@
 
 <div>
   <h2>🔗Links</h2>
-  <p>🗔 Demo URL: <a href="">Demo</a></p>
-  <p>🎨 Design in Figma: <a href="https://www.figma.com/file/guGDMqM4ujV9OT63juoRtT/Nexytech-Website?node-id=0%3A1">Figma</a></p>
+  <p>🗔 Demo URL: <a href="https://leonardoyz.github.io/Nexytech-Website/" target="_blank">Demo</a></p>
+  <p>🎨 Design in Figma: <a href="https://www.figma.com/file/guGDMqM4ujV9OT63juoRtT/Nexytech-Website?node-id=0%3A1" target="_blank">Figma</a></p>
 </div>
 
 #
