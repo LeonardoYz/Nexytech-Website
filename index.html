@@ -22,6 +22,7 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/icons/style.css" />
     <link rel="stylesheet" href="public/css/main.css" />
     <script
@@ -29,6 +30,8 @@
       defer
     ></script>
     <script src="src/js/swiper.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="src/js/scrollreveal.js" defer></script>
     <script src="src/js/main.js" defer></script>
     <title>Nexytech</title>
   </head>
@@ -127,7 +130,7 @@
     <main>
       <section class="section" id="home">
         <div class="container">
-          <div class="home__cta">
+          <div class="home__cta" data-aos="fade-down">
             <div class="home__image">
               <img
                 src="assets/images/home-image-left.png"
@@ -156,7 +159,7 @@
             </div>
           </div>
 
-          <div class="home__cards card">
+          <div class="home__cards card" data-aos="fade-down">
             <div class="card__box process">
               <div class="card__icon">
                 <i class="gear-icon"></i>
@@ -201,11 +204,11 @@
 
       <section class="section" id="about">
         <div class="container">
-          <div class="about__image">
+          <div class="about__image" data-aos="fade-down">
             <img src="assets/images/about-image.png" alt="Empresa" />
           </div>
 
-          <div class="about__text">
+          <div class="about__text" data-aos="fade-down">
             <h2 class="about__title">
               Empresa referência no mercado de desenvolvimento web e mobile
             </h2>
@@ -224,7 +227,7 @@
 
       <section class="section" id="services">
         <div class="container">
-          <div class="services__text">
+          <div class="services__text" data-aos="fade-down">
             <h2 class="services__title">Nossos serviços e especialidades</h2>
             <p class="services__paragraph">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -243,7 +246,7 @@
             </div>
           </div>
 
-          <div class="services__cards card">
+          <div class="services__cards card" data-aos="fade-down">
             <div class="card__box">
               <i class="ux-ui-design-icon"></i>
 
@@ -274,7 +277,7 @@
         </div>
       </section>
 
-      <section class="section" id="team">
+      <section class="section" id="team" data-aos="fade-down">
         <div class="container">
           <div class="team__text">
             <h2 class="team__title">Nosso time</h2>
@@ -292,11 +295,11 @@
 
       <section class="section" id="testimonials">
         <div class="container">
-          <h2 class="testimonials__title">
+          <h2 class="testimonials__title" data-aos="fade-down">
             O que nossos clientes acham dos nossos serviços ?
           </h2>
 
-          <div class="swiper">
+          <div class="swiper" data-aos="fade-down">
             <div class="swiper-wrapper testimonials__wrapper">
               <div class="testimonials__box swiper-slide">
                 <blockquote>

@@ -58,6 +58,7 @@ window.addEventListener("scroll", () => {
   }
 })
 
+// Theme switcher
 const themeButton = document.querySelector('.theme-switcher')
 const switcherIcon = document.getElementById("switcher-icon")
 const darkTheme = 'dark-theme'
