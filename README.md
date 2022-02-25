@@ -21,9 +21,8 @@
 
 <div>
   <h2>🔗Links</h2>
-  <ul>
-    <li>Demo URL: <a href="">Demo</a></li>
-  </ul>
+  <p>🗔 Demo URL: <a href="">Demo</a></p>
+  <p>🎨 Design in Figma: <a href="https://www.figma.com/file/guGDMqM4ujV9OT63juoRtT/Nexytech-Website?node-id=0%3A1">Figma</a></p>
 </div>
 
 #
