@@ -20,6 +20,7 @@
     />
     <link rel="stylesheet" href="../../assets/icons/style.css" />
     <link rel="stylesheet" href="../../public/css/main.css" />
+    <script src="../js/contact.js" defer></script>
     <script src="../js/main.js" defer></script>
     <title>Nexytech</title>
   </head>
@@ -137,36 +138,77 @@
             </div>
           </div>
 
-          <form action="#" class="contact__form">
-            <div class="contact__input-box">
-              <label for="first-name" class="contact__label"
-                >Primeiro nome</label
-              >
-              <input type="text" class="contact__input" id="first-name" />
+          <form action="#" class="contact__form" novalidate>
+            <div class="contact__input-box" id="nameInputBox">
+              <label for="name" class="contact__label">Primeiro nome</label>
+              <input type="text" class="contact__input" id="nameInput" />
               <i class="user-icon contact__icon"></i>
+              <span class="contact__error-message" id="nameErrorMessage"></span>
             </div>
 
-            <div class="contact__input-box">
+            <div class="contact__input-box" id="emailInputBox">
               <label for="email" class="contact__label">Email</label>
-              <input type="email" class="contact__input" id="email" />
+              <input type="email" class="contact__input" id="emailInput" />
               <i class="email-icon_outline contact__icon"></i>
+              <span
+                class="contact__error-message"
+                id="emailErrorMessage"
+              ></span>
             </div>
 
-            <div class="contact__input-box">
+            <div class="contact__input-box" id="messageInputBox">
               <label for="message" class="contact__label">Mensagem</label>
               <textarea
-                id="message"
+                id="messageInput"
                 cols="30"
                 rows="10"
                 class="contact__input text-area"
               ></textarea>
+              <span
+                class="contact__error-message"
+                id="textAreaErrorMessage"
+              ></span>
             </div>
 
             <div class="contact__submit">
-              <input type="submit" class="button" value="Enviar" />
+              <button type="submit" class="button" id="submit-button">
+                Enviar
+              </button>
             </div>
           </form>
         </div>
+      </div>
+
+      <div class="contact__alert alert" id="success-alert">
+        <div class="alert__icon">
+          <i class="checkmark-icon icon"></i>
+        </div>
+
+        <div class="alert__text">
+          <strong class="alert__title">Obrigado</strong>
+          <p class="alert__message">Sua mensagem foi enviada com sucesso.</p>
+        </div>
+
+        <i class="close-icon alert__close-icon" id="close-success-alert"></i>
+
+        <div class="alert__timeout" id="success-timeout"></div>
+      </div>
+
+      <div class="contact__alert alert" id="failed-alert">
+        <div class="alert__icon">
+          <i class="failed-icon icon"></i>
+        </div>
+
+        <div class="alert__text">
+          <strong class="alert__title">Mensagem não foi enviada</strong>
+          <p class="alert__message">
+            Verifique se todos os campos estão preenchidos corretamente.
+          </p>
+        </div>
+
+        <i class="close-icon alert__close-icon" id="close-failed-alert"></i>
+
+        <div class="alert__timeout" id="failed-timeout"></div>
       </div>
     </section>
   </body>

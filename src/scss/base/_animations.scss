@@ -71,3 +71,53 @@
     width: 100%;
   }
 }
+
+@keyframes alertFadeIn {
+  0% {
+    right: -350px;
+  }
+
+  80% {
+    right: 15px;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
+.fade-in {
+  animation: alertFadeIn 550ms forwards ease-out;
+}
+
+@keyframes alertFadeOut {
+  0% {
+    right: 0;
+  }
+
+  30% {
+    right: 30px;
+  }
+
+  100% {
+    right: -350px;
+  }
+}
+
+.fade-out {
+  animation: alertFadeOut 700ms forwards ease-in-out;
+}
+
+@keyframes alertTimeout {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0%;
+  }
+}
+
+.timeout {
+  animation: alertTimeout 3850ms 600ms forwards linear;
+}
