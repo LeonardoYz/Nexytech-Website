@@ -115,6 +115,7 @@
                     href="https://facebook.com"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Link para o facebook"
                     ><i class="facebook-icon"></i
                   ></a>
                 </li>
@@ -123,6 +124,7 @@
                     href="https://instagram.com"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Link para o instagram"
                     ><i class="instagram-icon"></i
                   ></a>
                 </li>
@@ -131,6 +133,7 @@
                     href="https://linkedin.com"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Link para o linkedin"
                     ><i class="linkedin-icon"></i
                   ></a>
                 </li>
@@ -140,14 +143,16 @@
 
           <form action="#" class="contact__form" novalidate>
             <div class="contact__input-box" id="nameInputBox">
-              <label for="name" class="contact__label">Primeiro nome</label>
+              <label for="nameInput" class="contact__label"
+                >Primeiro nome</label
+              >
               <input type="text" class="contact__input" id="nameInput" />
               <i class="user-icon contact__icon"></i>
               <span class="contact__error-message" id="nameErrorMessage"></span>
             </div>
 
             <div class="contact__input-box" id="emailInputBox">
-              <label for="email" class="contact__label">Email</label>
+              <label for="emailInput" class="contact__label">Email</label>
               <input type="email" class="contact__input" id="emailInput" />
               <i class="email-icon_outline contact__icon"></i>
               <span
@@ -157,7 +162,7 @@
             </div>
 
             <div class="contact__input-box" id="messageInputBox">
-              <label for="message" class="contact__label">Mensagem</label>
+              <label for="messageInput" class="contact__label">Mensagem</label>
               <textarea
                 id="messageInput"
                 cols="30"
