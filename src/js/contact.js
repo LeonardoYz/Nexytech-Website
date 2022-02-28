@@ -1,60 +1,64 @@
 const contactForm = document.querySelector(".contact__form")
 const allContactInputBoxes = document.querySelectorAll(".contact__input-box")
-const contactInputBoxesArray = Array.from(allContactInputBoxes)
 const validEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 
-contactForm.addEventListener("submit", e => {
-  e.preventDefault()
+contactForm.addEventListener("submit", event => {
+  event.preventDefault()
 
-  checkInputs()
+  checkNameInput()
+  checkEmailInput()
+  checkMessageInput()
   validateInputs()
 })
 
-// Checks if the inputs have errors, if it has, throws a custom message and adds a red border to the input with error, if there is no error just remove the error class
-function checkInputs() {
+const errorMessageForEmptyFields = element => element.innerText = "Você precisa preencher este campo"
+const addErrorClass = element => element.classList.add("error")
+const removeErrorClass = element => element.classList.remove("error")
+
+function checkNameInput() {
   if (nameInput.value === '' || nameInput.value == null) {
-    nameErrorMessage.innerText = "Você precisa preencher este campo"
-    nameInputBox.classList.add("error")
+    errorMessageForEmptyFields(nameErrorMessage)
+    addErrorClass(nameInputBox)
   } else if (nameInput.value.length < 3) {
     nameErrorMessage.innerText = "O nome precisa conter no mínimo 3 caracteres"
-    nameInputBox.classList.add("error")
+    addErrorClass(nameInputBox)
   } else if (nameInput.value.indexOf(" ") >= 0) {
     nameErrorMessage.innerText = "Nome invalido, verifique se há espaços em branco"
-    nameInputBox.classList.add("error")
+    addErrorClass(nameInputBox)
   } else {
-    nameInputBox.classList.remove("error")
+    removeErrorClass(nameInputBox)
   }
+}
 
+function checkEmailInput() {
   if (emailInput.value === "" || emailInput.value == null) {
-    emailErrorMessage.innerText = "Você precisa preencher este campo"
-    emailInputBox.classList.add("error")
+    errorMessageForEmptyFields(emailErrorMessage)
+    addErrorClass(emailInputBox)
   } else if (!validEmail.test(emailInput.value)) {
     emailErrorMessage.innerText = "Digite um email valido"
-    emailInputBox.classList.add("error")
+    addErrorClass(emailInputBox)
   } else {
-    emailInputBox.classList.remove("error")
+    removeErrorClass(emailInputBox)
   }
+}
 
+function checkMessageInput() {
   if (messageInput.value === "" || messageInput == null) {
-    textAreaErrorMessage.innerText = "Você precisa preencher este campo"
-    messageInputBox.classList.add("error")
+    errorMessageForEmptyFields(textAreaErrorMessage)
+    addErrorClass(messageInputBox)
   } else {
-    messageInputBox.classList.remove("error")
+    removeErrorClass(messageInputBox)
   }
 }
 
 // Validates whether the inputs have any errors or not, and calls custom alerts depending on the condition
 function validateInputs() {
-  const validate = contactInputBoxesArray.filter((element) => {
-    return element.classList.contains("error")
-  })
+  const contactInputBoxesArray = Array.from(allContactInputBoxes)
+  const validate = contactInputBoxesArray.filter(element => element.classList.contains("error"))
 
-  if (validate.length > 0) {
-    showFailedAlert()
-  } else {
-    showSuccessAlert()
-  }
+  if (validate.length > 0) return showFailedAlert()
+  return showSuccessAlert()
 }
 
 const successAlert = document.getElementById("success-alert")
